@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài toán quả bóng_sự kiện chuột</title>
+</head>
+<body>
+<form>
+    <img id="myImage" src="quabong.jpg"/>
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="Click Me" onclick = "moveRight();"/>
+</form>
+<script>
+    var immObj = null;
+    imgObj = document.getElementById('MyImage');
+    //var imgObj = null;
+    //var imgOgj = document.getElementById('MyImage');
+    //khởi tạo imgObj mà chúng ta đã dặt vị trí và các thuộc tính còn lại
+    function init(){
+        //var immObj = null;
+        //imgObj = document.getElementById('MyImage');
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0 px';
+    }
+    //Tạo hàm để tăng khoảng cách trái 10px .
+    function moveRight(){
+        //var imgObj = null;
+        window.onload = init();
+        imgObj.style.left = parseInt((imgObj.style.left) +10 +' px');
+    }
+    //gọi hàm init() khi trình duyệt tải lần đầu
+
+
+</script>
+
+
+</body>
+</html>
